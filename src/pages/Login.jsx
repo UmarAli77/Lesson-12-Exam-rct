@@ -5,8 +5,8 @@ import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
 
 const loginSchema = Joi.object().keys({
-  email: Joi.string().required(),
-  password: Joi.string().required(),
+  email: Joi.string().required('Enter your Email'),
+  password: Joi.string().required('Enter your Password'),
 });
 
 const Login = () => {
@@ -41,7 +41,7 @@ const Login = () => {
       <Form.Item label="Password">
         <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </Form.Item>
-      {error && <div style={{ color: 'ed' }}>{error}</div>}
+      {error && <div style={{ color: 'red' }}>{error}</div>}
       <Button onClick={handleSubmit} type="primary" htmlType="submit">
         Login
       </Button>
