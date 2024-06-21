@@ -5,6 +5,7 @@ import LayoutPage from './components/Layout';
 import ProductsPage from './components/ProductPage';
 import Categories from './components/CategoryPage';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/category' element={<Categories />} />
           </Route>
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
       </React.Suspense>
     </BrowserRouter>
