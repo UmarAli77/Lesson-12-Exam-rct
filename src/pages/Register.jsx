@@ -24,7 +24,7 @@ function Register() {
         if(!name || !email || !password) {
           toast('Iltimos maydonlarni toldiring !')
         } else {
-          const response = await axios.post('https://ecommerce-backend-fawn-eight.vercel.app/api/register');
+          const response = await axios.post('https://ecommerce-backend-fawn-eight.vercel.app/api/register', form);
           navigate('/login')
           console.log(response.data);
         }
